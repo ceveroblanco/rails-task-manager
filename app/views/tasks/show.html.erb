@@ -1,3 +1,15 @@
-<h1>hola esto es un show</h1>
+<h1>TASK Show</h1>
 
 <h2><%= @task.title %></h2>
+<h2><%= @task.details %></h2>
+<h2><% if @task.completed %>
+  <%= "check" %>
+  <% else %>
+  <%= "no check" %>
+<% end %></h2>
+
+
+<%= link_to  "EDITAR TASKS", edit_task_path(@task) %>
+<br>
+<br>
+<%= link_to  "Back to the list TASKS", tasks_path(@task) %>
